@@ -13,7 +13,7 @@ module.exports = {
             email,
             whatsapp,
             city,
-            uf
+            country
         } = req.body;
 
         const id = crypto.randomBytes(4).toString("HEX");
@@ -24,7 +24,7 @@ module.exports = {
             email,
             whatsapp,
             city,
-            uf
+            country
         })
 
         return res.json({

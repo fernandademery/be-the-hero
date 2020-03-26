@@ -13,7 +13,7 @@ module.exports = {
             .join("ongs", "ongs.id", "=", "incidents.ong_id")
             .limit(5)
             .offset((page - 1) * 5)
-            .select(["incidents.*", "ongs.name", "ongs.email", "ongs.whatsapp", "ongs.city", "ongs.uf"]);
+            .select(["incidents.*", "ongs.name", "ongs.email", "ongs.whatsapp", "ongs.city", "ongs.country"]);
         // These "limit" and "offset" methods allow us to have pagination, showing 5 incidents per page.
 
         res.header("X-Total-Count", count["count(*)"]);

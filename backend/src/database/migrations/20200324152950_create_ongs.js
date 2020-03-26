@@ -5,7 +5,7 @@ exports.up = function (knex) {
         table.string("email").notNullable();
         table.string("whatsapp").notNullable();
         table.string("city").notNullable();
-        table.string("uf", 2).notNullable();
+        table.string("country").notNullable();
     });
 };
 
@@ -14,7 +14,7 @@ exports.down = function (knex) {
 };
 
 
-// The "2" parameter after "uf" says that the data related to UF should only have 2 characters.   
+
 
 // The "up" method is responsible for creating the table. It says whats happens whenever the migration is
 // executed.
